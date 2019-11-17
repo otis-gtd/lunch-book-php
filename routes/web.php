@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+\View::addExtension('html','php');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view()->file(public_path().'/index.html');
+    //return view('welcome');
 });
